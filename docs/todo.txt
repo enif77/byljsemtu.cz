@@ -1,0 +1,70 @@
+TODO
+====
+
+- Pokud je Description prázdné, tak jej vůbec nezobrazovat.
+- Při procházení galerií tlačítky nahoře přeskakovat IsHidden položky.
+- Při procházení galerií tlačítky nahoře přepočítávat stránkování (gp).
+- Přidat obsah do stránek Novinky, Co tu najdete, O nás, a Kontakty.
+- Galerie by měla obsahovat odkaz na předchozí a následující galerii.
+- Galerie by měla obsahovat odkaz na seznam galerií (index).
+- Předchozí/následující stránkovací odkazy jsou na mobilu příliž malé.
+- Předělat pozadí seznamů galeriií a pohledů tak, aby se nemusel používat obrázek pro prázdné místo.
+- Přepočítat page při přechodu mezi stránkami, aby se z daného view šlo do správné stránky v seznamu galerií.
+- Zahešovat hesla v DB a v unlock.php pak zadané heslo nejdříve zahešovat a až pak porovnávat s DB.
+- templates/panorama.php: Předávat skybox resolution jako parametr stránky.
+- Optimalizovat velikosti obrázků.
+- Přidat možnost zvolit si rozlišení.
+- Vygenerovat textury/obrázky v různých rozlišeních.
+
+
+2018-10-26
+----------
+
++ Id defaultních položek v databázi je 1.
++ Upraveny natvrdo zadané Id číselníkových položek v kódu.
+
+
+2018-04-04
+----------
+
++ Obrázky se posílají napřímo. Už žádné čtení/parsování obrázků a následné překódování do JPEG.
+
+
+2018-03-26
+----------
+
++ Do galerie Čerčany přidat background a popisky.
++ Optimalizovat img/image.jpg - má skoro 4 MB!
++ Přidat podporu zobrazování fotek v jiném, než 4:3 poměru stran.
+
+
+2018-03-23
+----------
+
++ unlock.php obsahuje content (header a hlavní menu).
++ Page header se zobrazuje vlevo a s favicon a s přechodem pod.
++ Page header je součástí content.
++ UI_Header() se už nepoužívá.
+
+
+2018-03-22
+----------
+
++ View by mělo obsahovat odkazy na předchozí a následující view. 
+
+
+2018-03-19
+----------
+
++ Ikony u náhledu galerií/pohledů jsou poloprůhledné.
++ V náhledu panoramatické fotky zobrazit ikonu, že jde o panoramu.
++ Při návratu zpět z view se vracet na galerii a stránku, ze které jsme přišli.
++ unlock.php rozdělit na .php a šablonu v templates.
++ Opravit default hodnoty pro parametry id.
++ V seznamu galerií a v galerii nezobrazovat skryté položky (sloupec IsHidden).
+
+
+2018-03-16
+----------
+
++ Zobrazené obrázky by měly být celé a vždy udržet poměr stran.

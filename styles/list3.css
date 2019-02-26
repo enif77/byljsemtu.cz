@@ -1,0 +1,139 @@
+﻿html, body {
+    height: 100%;
+    margin: 0px !important;
+    padding: 0px !important;
+    background-color: rgb(225, 225, 225);
+    text-align: center;
+    font-family: Courier New, Courier, monospace;
+}
+
+/* Content. */
+
+.content {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    padding-bottom: 10px;
+    background-color: rgb(200, 200, 200);
+}
+
+/* Page header. */
+
+.page-header
+{
+    background: rgba(200,200,200,1); /* For browsers that do not support gradients */
+    background: linear-gradient(to right, rgba(200,200,200,0.9), rgba(200,200,200,0.25)); /* Standard syntax (must be last) */
+
+    margin-top:0px;
+    padding-top:10px;  /* Removes the top border. */
+    padding-bottom:8px;
+    padding-left:8px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.page-header a 
+{
+    color: #000;
+    text-decoration: none;
+    word-spacing: -8px;
+}
+
+.page-header img 
+{
+    vertical-align: text-top;
+    padding-right:2px;
+}
+
+/* Top menu. */
+
+.top-menu {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 8px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.top-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.top-menu a:hover {
+    text-decoration: underline;
+}
+
+/* Footer. */
+
+footer {
+    padding: 32px;
+}
+
+footer a 
+{
+    color: #000;
+    text-decoration: none;
+}
+
+/* Main image links table. */
+
+.content-grid {
+    display: grid;
+    justify-content: center;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fill, 320px);
+    grid-gap: 10px;
+}
+
+/* Styles for links to galleries/views. */
+
+.card {
+    width: 320px;
+    height: 160px;
+    position: relative;
+    display: block;
+    filter: grayscale(100%);
+    z-index: 1;
+}
+
+.image-wrapper:hover .card {
+    filter: none;
+}
+
+.card-icons-wrapper {
+    position: absolute; 
+    right:8px; 
+    bottom: 4px; 
+    z-index: 10;
+}
+
+.card-icon {
+    padding-left: 4px;
+    opacity: 0.5;
+}
+
+/* Styles for image descriptions. */
+
+.image-description {
+    position: absolute;
+    bottom: 8px;
+    margin: 2px;
+    margin-left: 8px;
+    padding: 2px;
+    width: 100%;
+    color: #fff;
+    background: rgba(29, 106, 154, 0.72);
+    font-size: .85em;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 15;
+  
+    transition: opacity .3s, visibility .2s;
+}
+  
+.image-wrapper:hover .image-description {
+    visibility: visible;
+    opacity: 1;
+}

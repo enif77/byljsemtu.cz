@@ -1,0 +1,14 @@
+-- Získání galerie včetně pořadí a poměrů stran.
+
+SELECT 
+	V.*, GxV.[Order] AS ViewOrder, VT.HRatio, VT.VRatio
+FROM 
+	GalleriesXViews AS GxV 
+INNER JOIN 
+	Views AS V ON V.[Id] = GxV.[ViewId] 
+INNER JOIN 
+    ViewTypes AS VT ON VT.[Id] = V.[ViewTypeId] 
+WHERE 
+	GxV.[GalleryId] = 6 AND 
+	GxV.[ViewId] = 107 
+ORDER BY GxV.[Order];
