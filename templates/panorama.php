@@ -3,7 +3,8 @@
     <head>
         <title>Byl jsem tu!</title>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <?php UI_PageDescription(); ?>
         <link rel="stylesheet" href="styles/view.css">
         <link rel="icon" href="img/favicon.png">
 

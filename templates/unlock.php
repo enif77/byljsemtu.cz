@@ -3,6 +3,8 @@
 <head>
     <title>Byl jsem tu! - Code Unlock</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?php UI_PageDescription(); ?>
     <link rel="stylesheet" href="styles/list.css">
     <style>
     </style>

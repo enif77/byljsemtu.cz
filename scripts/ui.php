@@ -7,7 +7,7 @@ require_once "db.php";
 
 function UI_NavigationButtons($db, $gallery, $view)
 {
-    echo '<div id="info"><a href="index.php"><img src="img/go-home.png" width="32" height="32" alt="Zpět domů" title="Zpět na titulní stránku"/></a> ';
+    echo '<nav><div id="info"><a href="index.php"><img src="img/go-home.png" width="32" height="32" alt="Zpět domů" title="Zpět na titulní stránku"/></a> ';
 
     $prevId = DB_GetPreviousViewId($db, $gallery['Id'], $view['ViewOrder']);
     if (isset($prevId))
@@ -31,13 +31,19 @@ function UI_NavigationButtons($db, $gallery, $view)
         echo '<a href="#"><img src="img/go-next.png" width="32" height="32" alt="Následující lokace" title="Následující lokace"/></a> ';
     }
 
-    echo '<a href="#"><img id="description-icon" src="img/info.png" width="32" height="32" alt="Informace o lokaci" title="Zobrazit informace o lokaci"/></a></div>';
+    echo '<a href="#"><img id="description-icon" src="img/info.png" width="32" height="32" alt="Informace o lokaci" title="Zobrazit informace o lokaci"/></a></div></nav>';
 }
 
 
 function UI_PageLogo()
 {
-    echo '<div id="logo"><a href="index.php"><img src="img/favicon.png" width="48" height="48" alt="Zpět domů" title="Zpět na titulní stránku"/></a></div>';
+    echo '<div id="logo"><a href="index.php"><img src="img/favicon.png" alt="byljsemtu.cz page logo." width="48" height="48" alt="Zpět domů" title="Zpět na titulní stránku"/></a></div>';
+}
+
+
+function UI_PageDescription()
+{
+    echo '<meta name="Description" content="Author: Premysl Fara, Category: Blogs">';
 }
 
 
@@ -96,8 +102,8 @@ function UI_LazyCardLoader()
 function UI_BeginContent($link = null)
 {
     echo '<div class="content">';
-    echo '<div class="page-title"><div class="page-header"><a href="index.php"><img src="img/favicon.png" width="32" height="32">yl jsem tu!</a></div>';
-    echo '<div class="top-menu"><a href="index.php">Domů</a> | <a href="news.php">Novinky</a> | <a href="index.php">Co tu najdete</a> | <a href="index.php">O nás</a> | <a href="index.php">Kontakty</a></div></div>';    
+    echo '<header><div class="page-header"><a href="index.php"><img src="img/favicon.png" alt="Page logo." width="32" height="32">yl jsem tu!</a></div>';
+    echo '<nav><div class="top-menu"><a href="index.php">Domů</a> | <a href="news.php">Novinky</a> | <a href="index.php">Co tu najdete</a> | <a href="index.php">O nás</a> | <a href="index.php">Kontakty</a></div></nav></header><main>';    
 }
 
 
@@ -115,7 +121,7 @@ function UI_EndContentGrid()
 
 function UI_EndContent()
 {
-    echo '</div>';
+    echo '</main></div>';
 }
 
 

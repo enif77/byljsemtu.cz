@@ -9,7 +9,8 @@
 
 /* Page title. */
 
-.page-title {
+header
+{
     width: 100%;
     position: -webkit-sticky; /* Safari */
     position: sticky;
