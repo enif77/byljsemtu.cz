@@ -58,16 +58,21 @@ function UI_DescriptionBox($db, $view)
 function UI_GalleryCardLink($db, $gallery)
 {
     $galleryId = $gallery["Id"];
+    $galleryTitle = $gallery["Title"];
+    if (isset($galleryTitle) == false || $galleryTitle === "")
+    {
+        $galleryTitle = $gallery["Name"];
+    }
 
     echo '<div class="image-wrapper">';
-    echo '<a href="gallery.php?id=', $galleryId, '"><img class="card lazy" data-src="thumbg.php?id=', $galleryId, '" alt="', $gallery["Description"], '"></a>';
+    echo '<a href="gallery.php?id=', $galleryId, '"><img class="card lazy" data-src="thumbg.php?id=', $galleryId, '" alt="', $galleryTitle, '"></a>';
     echo '<div class="card-icons-wrapper">';
     if (DB_IsGalleryLocked($db, $gallery))
     {
         echo '<img class="card-icon" src="img/lock.png" alt="Locked" width="32" height="32" />';
     }
     echo '</div>';
-    if (isset($gallery["Description"]) && $gallery["Description"] != "") echo '<div class="image-description">', $gallery["Description"], '</div>';
+    echo '<div class="image-description">', $galleryTitle, '</div>';
     echo '</div>';
 }
 

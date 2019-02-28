@@ -50,7 +50,7 @@ function DB_GetGalleries($db)
 
 function DB_GetGalleriesForIndex($db)
 {
-    $statement = $db->prepare('SELECT [Id], [LockId], [Description] FROM Galleries WHERE [Id] > 0 AND [IsHidden] = 0 ORDER BY [Order] ASC;');
+    $statement = $db->prepare('SELECT [Id], [Name], [LockId], [Title] FROM Galleries WHERE [Id] > 0 AND [IsHidden] = 0 ORDER BY [Order] ASC;');
 
     $result = $statement->execute();
     if ($result->numColumns() == 0)
