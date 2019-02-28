@@ -17,11 +17,12 @@
             }
         </style>
     </head>
+
     <body><?php
-  
-    UI_BeginContent();
-?>
-<div class="content-left">
+
+UI_BeginContent();
+
+?><div class="content-left">
 <h2>2019-02-26</h2>
 <p>Lighthouse od Googlu říká, že dobrý. (Opravy chyb.)</p>
 
@@ -42,9 +43,10 @@ Až přidám lazy-loading pro obrázky, tak bude svět zase o trošku lepší m�
 
 <h2>2019-02-10</h2>
 <p>Dnes sem konečně zase něco na svých stránkách udělal... :-)</p>
-</div>
-<?php
-    UI_EndContent(); 
-    UI_Footer();
+</div><?php
+
+UI_EndContent(); 
+UI_Footer();
+
 ?></body>
 </html>

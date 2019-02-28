@@ -29,12 +29,12 @@
         </style>
     </head>
     
-    <body>
-        <?php 
-            UI_NavigationButtons($db, $gallery, $view);
-            UI_DescriptionBox($db, $view); 
-        ?>
-        <div class="stretchy-wrapper"><?php UI_PageLogo(); ?></div>
+    <body><?php 
+
+UI_NavigationButtons($db, $gallery, $view);
+UI_DescriptionBox($db, $view); 
+
+?><div class="stretchy-wrapper"><?php UI_PageLogo(); ?></div>
 
         <script>
             description_Init();

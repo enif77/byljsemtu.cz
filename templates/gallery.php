@@ -10,34 +10,36 @@
         <style>
         </style>
     </head>
-    <body>
-<?php
-    UI_BeginContent();
 
-    // TODO: Toto do boxu pod menu, nebo do hlavičky.
-    //echo '<h2>', $gallery["Title"], '</h2>';
+    <body><?php
 
-    UI_BeginContentGrid();
+UI_BeginContent();
 
-    $count = 0;
-    $results = DB_GetGalleryViews($db, $gallery["Id"]);
-    if (isset($results))
+// TODO: Toto do boxu pod menu, nebo do hlavičky.
+//echo '<h2>', $gallery["Title"], '</h2>';
+
+UI_BeginContentGrid();
+
+$count = 0;
+$results = DB_GetGalleryViews($db, $gallery["Id"]);
+if (isset($results))
+{
+    while ($view = $results->fetchArray()) 
     {
-        while ($view = $results->fetchArray()) 
-        {
-            UI_ViewCardLink($db, $view, $gallery);
-    
-            $count++;
-        }
+        UI_ViewCardLink($db, $view, $gallery);
 
-        $results->finalize();
+        $count++;
     }
 
-    UI_EndContentGrid(); 
-    UI_EndContent();
-    UI_Footer();
-    UI_LazyCardLoader();
-    
-    DB_Close($db);
+    $results->finalize();
+}
+
+UI_EndContentGrid(); 
+UI_EndContent();
+UI_Footer();
+UI_LazyCardLoader();
+
+DB_Close($db);
+
 ?></body>
 </html>

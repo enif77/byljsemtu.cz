@@ -10,17 +10,11 @@
     </style>
 </head>
 
-<body>
-
-<?php 
-
-    //UI_Header("index.php"); 
+<body><?php 
     UI_BeginContent();
 
     $lock = DB_GetLock($db, URL_GetParameter("l", 0));
-?>
-
-    <h2>Code Unlock</h2>
+?><h2>Code Unlock</h2>
 
     <form action="" method="post">
         <label>Code:</label>
@@ -31,14 +25,8 @@
         <input id="target" name="target" type="hidden" value="<?php echo URL_GetParameter("t", "index.php"); ?>">
 
         <p><?php echo $error; ?></p>
-    </form>
-
-<?php 
-
+    </form><?php 
     UI_EndContent(); 
     UI_Footer();
-
-?>
-
-</body>
+?></body>
 </html>

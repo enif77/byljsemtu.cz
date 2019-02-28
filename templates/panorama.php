@@ -23,9 +23,11 @@
     <body>
         <div id="container"></div>
         <?php 
-            UI_NavigationButtons($db, $gallery, $view); 
-            UI_DescriptionBox($db, $view); 
-            UI_PageLogo();
+
+UI_NavigationButtons($db, $gallery, $view); 
+UI_DescriptionBox($db, $view); 
+UI_PageLogo();
+
         ?>
         
         <script>
@@ -34,11 +36,12 @@
 
 <?php 
 
-    echo "document.title = document.title + ' - ' + '", $view["Title"], "';";
-    echo "view_id = '", $view["Id"], "';";
-    echo "view_resolution = '", DEFAULT_TEXTURE_RESOLUTION, "';"; // TODO: Predavat skybox resolution jako parametrstranky.
+echo "document.title = document.title + ' - ' + '", $view["Title"], "';";
+echo "view_id = '", $view["Id"], "';";
+echo "view_resolution = '", DEFAULT_TEXTURE_RESOLUTION, "';"; // TODO: Predavat skybox resolution jako parametrstranky.
 
-    DB_Close($db);
+DB_Close($db);
+
 ?>
 
             view_Init();
