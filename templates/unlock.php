@@ -11,9 +11,11 @@
 </head>
 
 <body><?php 
+
     UI_BeginContent();
 
     $lock = DB_GetLock($db, URL_GetParameter("l", 0));
+    
 ?><h2>Code Unlock</h2>
 
     <form action="" method="post">
@@ -26,7 +28,10 @@
 
         <p><?php echo $error; ?></p>
     </form><?php 
-    UI_EndContent(); 
-    UI_Footer();
+
+UI_EndContent(); 
+UI_Footer();
+UI_SideMenuControl();
+
 ?></body>
 </html>

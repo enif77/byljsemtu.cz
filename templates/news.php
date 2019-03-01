@@ -47,6 +47,7 @@ Až přidám lazy-loading pro obrázky, tak bude svět zase o trošku lepší m�
 
 UI_EndContent(); 
 UI_Footer();
+UI_SideMenuControl();
 
 ?></body>
 </html>

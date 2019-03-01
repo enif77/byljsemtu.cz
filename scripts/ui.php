@@ -108,7 +108,43 @@ function UI_BeginContent($link = null)
 {
     echo '<div class="content">';
     echo '<header><div class="page-header"><a href="index.php"><img src="img/favicon.png" alt="Page logo." width="32" height="32">yl jsem tu!</a></div>';
-    echo '<nav><div class="top-menu"><a href="index.php">Domů</a> | <a href="news.php">Novinky</a> | <a href="index.php">Co tu najdete</a> | <a href="index.php">O nás</a> | <a href="index.php">Kontakty</a></div></nav></header><main>';    
+        
+    // <a href="#javascript:void(0)"  -> Zabraňuje skrolování stránky nahoru po rozbalení/sbalení side menu.
+    // https://stackoverflow.com/questions/14038713/change-display-property-scrolls-the-page-to-its-top
+
+    // Menu button.
+    echo '<nav class="top-menu">'; 
+    echo '<span class="open-slide">';
+    echo '<a href="#javascript:void(0)" onclick="openSlideMenu()">';
+    echo '<img src="img/menu_20x20.png" alt="Top menu." width="20" height="20">';
+    echo '</a></span>';
+    
+    // Top menu.
+    echo '<span class="top-menu-nav"><a href="index.php">Domů</a> | ';    
+    echo '<a href="news.php">Novinky</a> | ';    
+    echo '<a href="index.php">Co tu najdete</a> | ';    
+    echo '<a href="index.php">O nás</a></span>';    
+    echo '</nav>';    
+
+    // Side menu.
+    echo '<div id="side-menu" class="side-nav">';
+    echo '<a href="#javascript:void(0)" class="btn-close" onclick="closeSlideMenu()">&times;</a>';
+    echo '<a href="index.php">Domů</a>';
+    echo '<a href="news.php">Novinky</a>';
+    echo '<a href="index.php">Co tu najdete</a>';
+    echo '<a href="index.php">O nás</a>';
+    echo '</div>';
+
+    echo '</header><main id="main">';    
+}
+
+
+function UI_SideMenuControl()
+{
+    echo '<script>';
+    echo 'function openSlideMenu() { document.getElementById(\'side-menu\').style.display = \'block\'; }';
+    echo 'function closeSlideMenu() { document.getElementById(\'side-menu\').style.display = \'none\'; }';
+    echo '</script>';
 }
 
 

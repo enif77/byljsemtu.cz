@@ -38,6 +38,7 @@ UI_EndContentGrid();
 UI_EndContent();
 UI_Footer();
 UI_LazyCardLoader();
+UI_SideMenuControl();
 
 DB_Close($db);
 

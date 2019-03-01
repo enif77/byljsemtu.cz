@@ -74,6 +74,57 @@ header
     text-decoration: underline;
 }
 
+.open-slide img {
+    vertical-align: text-top;
+    padding-right:8px;
+}
+
+/* Side menu. */
+
+.side-nav{
+    text-align: left;
+    width:200px;
+    position:absolute;
+    z-index:10;
+    top:64px;
+    left:8px;
+    background-color:#111;
+    opacity:0.9;
+    overflow-x:hidden;
+    padding-top:50px;
+    padding-bottom:20px;
+    transition:0.5s;
+    display: none;
+  }
+  
+  .side-nav a {
+    padding:10px 10px 10px 30px;
+    text-decoration:none;
+    color:#ccc;
+    display:block;
+    transition:0.3s;
+  }
+  
+  .side-nav a:hover{
+    color:#fff;
+  }
+  
+  .side-nav .btn-close{
+    position:absolute;
+    top:0;
+    right:22px;
+    font-size:36px;
+    margin-left:50px;
+  }
+  
+  @media(max-width:568px){
+    .top-menu-nav{display:none}
+  }
+  
+  @media(min-width:568px){
+    /*.open-slide{display:none}*/
+  }
+
 /* Footer. */
 
 footer {
