@@ -107,6 +107,7 @@ header
   
   .side-nav a:hover{
     color:#fff;
+    text-decoration: underline;
   }
   
   .side-nav .btn-close{
