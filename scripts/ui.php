@@ -82,7 +82,7 @@ function UI_ViewCardLink($db, $view, $gallery)
     $viewId = $view["Id"];
 
     echo '<div class="image-wrapper">';
-    echo '<a href="view.php?id=', $viewId, '&gi=', $gallery["Id"], '"><img class="card lazy" data-src="thumbv.php?id=', $viewId, '" alt="', $view["Description"], '"></a>';
+    echo '<a href="view.php?id=', $viewId, '&gi=', $gallery["Id"], '"><img class="card lazy" data-src="thumbv.php?id=', $viewId, '" alt="', $view["Title"], '"></a>';
     echo '<div class="card-icons-wrapper">';
     if (DB_IsViewLocked($db, $view) || DB_IsGalleryLocked($db, $gallery))
     {
@@ -93,7 +93,7 @@ function UI_ViewCardLink($db, $view, $gallery)
         echo '<img class="card-icon" src="img/panorama.png" alt="Panorama" width="32" height="32" />';
     }
     echo '</div>';
-    if (isset($view["Description"]) && $view["Description"] != "") echo '<div class="image-description">', $view["Description"], '</div>';
+    if (isset($view["Title"]) && $view["Title"] != "") echo '<div class="image-description">', $view["Title"], '</div>';
     echo '</div>';
 }
 

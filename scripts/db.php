@@ -82,7 +82,7 @@ function DB_GetViews($db)
 
 function DB_GetGalleryViews($db, $galleryId)
 {
-    $statement = $db->prepare('SELECT V.[Id], V.[ViewTypeId], V.[LockId], V.[Description], GxV.[Order] FROM GalleriesXViews AS GxV INNER JOIN Views AS V ON V.[Id] = GxV.[ViewId] WHERE GxV.[GalleryId] = :GalleryId AND V.[IsHidden] = 0 ORDER BY GxV.[Order] ASC;');
+    $statement = $db->prepare('SELECT V.[Id], V.[ViewTypeId], V.[LockId], V.[Title], GxV.[Order] FROM GalleriesXViews AS GxV INNER JOIN Views AS V ON V.[Id] = GxV.[ViewId] WHERE GxV.[GalleryId] = :GalleryId AND V.[IsHidden] = 0 ORDER BY GxV.[Order] ASC;');
     $statement->bindValue(':GalleryId', $galleryId);
 
     $result = $statement->execute();

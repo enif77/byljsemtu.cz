@@ -137,6 +137,25 @@ footer a
     text-decoration: none;
 }
 
+/* Gallery title and description. */
+
+.gallery-title {
+    text-align: left;
+    font-size:1.5em;
+    font-weight: bold;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.gallery-description {
+    text-align: left;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 16px;
+}
+
 /* Main image links table. */
 
 .content-grid {

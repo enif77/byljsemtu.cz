@@ -23,6 +23,10 @@
 UI_BeginContent();
 
 ?><div class="content-left">
+<h2>2019-03-11</h2>
+<p>Galerie ukazuje titulek u obrázků a titulek a popisek sebe samé.</p>
+<p>A také jsem přidal galerii z návštěvy zříceniny hradu <a href="gallery.php?name=201805_Valecov">Valečov</a>.</p>
+
 <h2>2019-02-26</h2>
 <p>Lighthouse od Googlu říká, že dobrý. (Opravy chyb.)</p>
 
