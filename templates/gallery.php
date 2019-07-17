@@ -15,23 +15,17 @@
 
 UI_BeginContent();
 
-// TODO: Toto do boxu pod menu, nebo do hlavičky.
-//echo '<h2>', $gallery["Title"], '</h2>';
-
 echo '<div class="gallery-title">', $gallery["Title"], '</div>';
 echo '<div class="gallery-description">', $gallery["Description"], '</div>';
 
 UI_BeginContentGrid();
 
-$count = 0;
 $results = DB_GetGalleryViews($db, $gallery["Id"]);
 if (isset($results))
 {
     while ($view = $results->fetchArray()) 
     {
         UI_ViewCardLink($db, $view, $gallery);
-
-        $count++;
     }
 
     $results->finalize();
